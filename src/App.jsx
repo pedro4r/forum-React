@@ -5,6 +5,51 @@ import { Sidebar } from './components/Sidebar';
 import styles from './App.module.css'
 import './global.css';
 
+const posts = [
+  { id: 1,
+    author: { 
+      avatarUrl: "https://github.com/pedro4r.png",
+      name: 'Diego Fernandes',
+      role: 'CTO @ Voabox LLC',
+    },
+    content: [
+      {type: 'paragraph', content:'Hey Guys! 👋'},
+      {type: 'paragraph', content:'I just created a new project! Check this out!🚀'},
+      {type: 'link', content:'clearcloud.design/doctorcare'},
+      {type: 'paragraph', content:'#newproject #code #webdev'}
+    ],
+    publishedAt: new Date('2022-02-12 20:00:00'),
+  },
+  { id: 2,
+    author: { 
+      avatarUrl: "https://github.com/diego3g.png",
+      name: 'Diego Fernandes',
+      role: 'CTO @ Voabox LLC',
+    },
+    content: [
+      {type: 'paragraph', content:'Hey Guys! 👋'},
+      {type: 'paragraph', content:'I just created a new project! Check this out!🚀'},
+      {type: 'link', content:'clearcloud.design/doctorcare'},
+      {type: 'paragraph', content:'#newproject #code #webdev'}
+    ],
+    publishedAt: new Date('2022-02-03 20:00:00'),
+  },
+  { id: 3,
+    author: { 
+      avatarUrl: "https://github.com/maykbrito.png",
+      name: 'Mayk Brito',
+      role: 'Educator @ RocketSeat',
+    },
+    content: [
+      {type: 'paragraph', content:'Hey Guys! 👋'},
+      {type: 'paragraph', content:'I just created a new project! Check this out!🚀'},
+      {type: 'link', content:'clearcloud.design/doctorcare'},
+      {type: 'paragraph', content:'#newproject #code #webdev'}
+    ],
+    publishedAt: new Date('2022-01-10 20:00:00'),
+  }
+];
+
 export function App() {
   return (
   <div>
@@ -14,15 +59,17 @@ export function App() {
     <div className={styles.wrapper}>
       <Sidebar/>
       <main>
-        <Post 
-        author="Pedro"
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius adipisci, facere nostrum doloremque corporis accusantium, autem quod facilis illo praesentium totam magni qui ipsum! Tempora dolorum omnis natus doloribus dolore!"
-        />
-
-        <Post
-        author="Bruno"
-        content="Nostrum doloremque corporis accusantium, autem quod facilis illo praesentium totam magni qui ipsum! Tempora dolorum omnis natus doloribus dolore!"
-        />
+        {posts.map(post => {
+          return (
+            <Post 
+            key={post.id}
+            author={post.author}
+            content={post.content}
+            publishedAt={post.publishedAt}
+            />
+          )
+        })
+        }
       </main>
     </div>
     
