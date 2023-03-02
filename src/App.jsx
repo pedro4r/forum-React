@@ -18,7 +18,7 @@ const posts = [
       {type: 'link', content:'clearcloud.design/doctorcare'},
       {type: 'paragraph', content:'#newproject #code #webdev'}
     ],
-    publishedAt: new Date('2022-02-12 20:00:00'),
+    publishedAt: new Date('2022-02-12 01:02:00'),
   },
   { id: 2,
     author: { 
@@ -32,7 +32,7 @@ const posts = [
       {type: 'link', content:'clearcloud.design/doctorcare'},
       {type: 'paragraph', content:'#newproject #code #webdev'}
     ],
-    publishedAt: new Date('2022-02-03 20:00:00'),
+    publishedAt: new Date('2022-02-03 10:30:00'),
   },
   { id: 3,
     author: { 
@@ -46,7 +46,7 @@ const posts = [
       {type: 'link', content:'clearcloud.design/doctorcare'},
       {type: 'paragraph', content:'#newproject #code #webdev'}
     ],
-    publishedAt: new Date('2022-01-10 20:00:00'),
+    publishedAt: new Date('2022-01-10 20:20:00'),
   }
 ];
 
